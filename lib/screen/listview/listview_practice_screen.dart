@@ -20,7 +20,7 @@ class ListviewPracticeScreen extends StatelessWidget {
               alignment: Alignment.center,
               padding: EdgeInsets.all(20),
               child: Text(
-                "${dataList[index]}",
+                index.toString(),
                 style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
               ),
             );
