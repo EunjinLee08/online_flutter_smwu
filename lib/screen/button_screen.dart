@@ -6,6 +6,9 @@ import 'package:online_lecture_smwu/screen/column_screen.dart';
 import 'package:online_lecture_smwu/screen/container_practice_screen.dart';
 import 'package:online_lecture_smwu/screen/container_screen.dart';
 import 'package:online_lecture_smwu/screen/image/image_screen.dart';
+import 'package:online_lecture_smwu/screen/listview/listview_builder_screen.dart';
+import 'package:online_lecture_smwu/screen/listview/listview_practice_screen.dart';
+import 'package:online_lecture_smwu/screen/listview/listview_screen.dart';
 import 'package:online_lecture_smwu/screen/row/row_practice_screen.dart';
 import 'package:online_lecture_smwu/screen/row/row_screen.dart';
 import 'package:online_lecture_smwu/screen/stack/stack_practice_screen.dart';
@@ -165,6 +168,42 @@ class ButtonScreen extends StatelessWidget {
                     ));
                   },
                   child: Text("Stack Practice")),
+              SizedBox(
+                height: 10,
+              ),
+              ElevatedButton(
+                  onPressed: () {
+                    Navigator.push(context, MaterialPageRoute(
+                      builder: (context) {
+                        return ListviewScreen();
+                      },
+                    ));
+                  },
+                  child: Text("ListView")),
+              SizedBox(
+                height: 10,
+              ),
+              ElevatedButton(
+                  onPressed: () {
+                    Navigator.push(context, MaterialPageRoute(
+                      builder: (context) {
+                        return ListviewBuilderScreen();
+                      },
+                    ));
+                  },
+                  child: Text("ListView Builder")),
+              SizedBox(
+                height: 10,
+              ),
+              ElevatedButton(
+                  onPressed: () {
+                    Navigator.push(context, MaterialPageRoute(
+                      builder: (context) {
+                        return ListviewPracticeScreen();
+                      },
+                    ));
+                  },
+                  child: Text("ListView Practice")),
             ],
           ),
         ),

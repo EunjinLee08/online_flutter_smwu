@@ -74,7 +74,8 @@ class Collections {
     nameAge["sophie"] = 43;
     print("nameAge 1 : $nameAge");
 
-    nameAge.remove("chris");
+    //  nameAge.remove("chris");
+    nameAge.removeWhere((key, value) => key == "chris");
     print("nameAge 2 : $nameAge");
   }
 
