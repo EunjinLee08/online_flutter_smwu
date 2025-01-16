@@ -1,3 +1,5 @@
+import 'collections.dart';
+
 void main() {
   String name = "eunjinlee";
   print(name);
@@ -15,4 +17,6 @@ void main() {
 
   const name4 = "은진";
 
+  Collections collections = Collections();
+  collections.listPractice();
 }
