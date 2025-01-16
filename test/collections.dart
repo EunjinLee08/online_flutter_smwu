@@ -47,4 +47,58 @@ class Collections {
     animal.removeAt(1);
     print("animal : $animal");
   }
+
+  void collectionMap() {
+    Map<String, int> nameAgeMap = {};
+    nameAgeMap["eunjin"] = 23;
+    print(nameAgeMap);
+
+    Map<String, dynamic> dynamicMap = {};
+    dynamicMap["a"] = 1;
+    dynamicMap["b"] = "cat";
+    dynamicMap["c"] = true;
+    print(dynamicMap);
+    print("get dynamicMap : ${dynamicMap["b"]}");
+
+    dynamicMap.remove("c");
+    print("remove dynamicMap : $dynamicMap");
+
+    dynamicMap.length;
+    dynamicMap.clear();
+  }
+
+  void mapPractice() {
+    Map<String, int> nameAge = {};
+    nameAge["eunjin"] = 23;
+    nameAge["chris"] = 21;
+    nameAge["sophie"] = 43;
+    print("nameAge 1 : $nameAge");
+
+    nameAge.remove("chris");
+    print("nameAge 2 : $nameAge");
+  }
+
+  void collectionSet() {
+    Set ss = {};
+    ss.add("a");
+    ss.add(1);
+    print("collectionSet 1 : $ss");
+
+    ss.remove("a");
+    print("collectionSet 2 : $ss");
+  }
+
+  void setPractice() {
+    Set<String> countries = {};
+
+    countries.add("Korea");
+    countries.add("Japan");
+    countries.add("USA");
+    countries.add("Spain");
+    countries.add("China");
+    print("countries 1 : $countries");
+
+    countries.remove("Japan");
+    print("countries 2 : $countries");
+  }
 }

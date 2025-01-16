@@ -18,5 +18,5 @@ void main() {
   const name4 = "은진";
 
   Collections collections = Collections();
-  collections.listPractice();
+  collections.setPractice();
 }
