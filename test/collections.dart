@@ -98,7 +98,7 @@ class Collections {
     countries.add("China");
     print("countries 1 : $countries");
 
-    countries.remove("Japan");
+    countries.remove("Korea");
     print("countries 2 : $countries");
   }
 }
