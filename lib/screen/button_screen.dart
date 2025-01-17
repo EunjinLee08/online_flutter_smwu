@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:online_lecture_smwu/screen/checkbox/checkbox_screen.dart';
 import 'package:online_lecture_smwu/screen/click/click_screen.dart';
 import 'package:online_lecture_smwu/screen/column_practice_screen.dart';
 import 'package:online_lecture_smwu/screen/column_row_advanced_screen.dart';
@@ -16,6 +17,7 @@ import 'package:online_lecture_smwu/screen/stack/stack_practice_screen.dart';
 import 'package:online_lecture_smwu/screen/stack/stack_screen.dart';
 import 'package:online_lecture_smwu/screen/stateful/stateful_screen.dart';
 import 'package:online_lecture_smwu/screen/stateless/stateless_screen.dart';
+import 'package:online_lecture_smwu/screen/text/text_form_field_screen.dart';
 import 'package:online_lecture_smwu/screen/text/text_screen.dart';
 import 'package:online_lecture_smwu/screen/text/text_screen_practice.dart';
 
@@ -243,6 +245,30 @@ class ButtonScreen extends StatelessWidget {
                     ));
                   },
                   child: Text("Click")),
+              SizedBox(
+                height: 10,
+              ),
+              ElevatedButton(
+                  onPressed: () {
+                    Navigator.push(context, MaterialPageRoute(
+                      builder: (context) {
+                        return CheckboxScreen();
+                      },
+                    ));
+                  },
+                  child: Text("CheckBox")),
+              SizedBox(
+                height: 10,
+              ),
+              ElevatedButton(
+                  onPressed: () {
+                    Navigator.push(context, MaterialPageRoute(
+                      builder: (context) {
+                        return TextFormFieldScreen();
+                      },
+                    ));
+                  },
+                  child: Text("Text Form Field")),
             ],
           ),
         ),
