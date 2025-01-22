@@ -32,7 +32,7 @@ class _MemberDetailScreenState extends State<MemberDetailScreen> {
       "email": widget.email,
       "password": "qqqq",
     }).then(
-          (value) {
+      (value) {
         pwController.text = value.data["password"];
         descriptionController.text = value.data["description"];
       },
@@ -77,7 +77,8 @@ class _MemberDetailScreenState extends State<MemberDetailScreen> {
             const SizedBox(height: 10),
             ElevatedButton(
               onPressed: () async {
-                Response response = await widget.dio.patch("/api/v1/member/update", data: {
+                Response response =
+                    await widget.dio.patch("/api/v1/member/update", data: {
                   "email": widget.email,
                   "password": pwController.text,
                   "description": descriptionController.text,
@@ -91,13 +92,27 @@ class _MemberDetailScreenState extends State<MemberDetailScreen> {
                   Navigator.pop(context, true);
                 }
               },
-              style: ElevatedButton.styleFrom(fixedSize: const Size(double.infinity, 50)),
+              style: ElevatedButton.styleFrom(
+                  fixedSize: const Size(double.infinity, 50)),
               child: const Text("업데이트"),
             ),
             const SizedBox(height: 10),
             ElevatedButton(
-              onPressed: () {},
-              style: ElevatedButton.styleFrom(fixedSize: const Size(double.infinity, 50)),
+              onPressed: () async {
+                Response response =
+                    await widget.dio.delete("/api/v1/member/delete", data: {
+                  "email": idController.text,
+                  "password": pwController.text,
+                });
+
+                if (response.statusCode == 204) {
+                  ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
+                    content: Text("성공"),
+                  ));
+                }
+              },
+              style: ElevatedButton.styleFrom(
+                  fixedSize: const Size(double.infinity, 50)),
               child: const Text("삭제"),
             ),
           ],
